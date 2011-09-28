@@ -1,0 +1,557 @@
+/*Kremica CSS Sheet*/
+/*******
+ * ABOUT THIS CSS SHEET
+ *******
+ * This sheet is broken up into:
+ * 1. Browser Resets
+ * 2. Page Layout
+ * 		a. First One Column
+ * 		b. Second One Column
+ * 		c. First Two Columns
+ * 		d. Second Two Columns
+ * 3. Typography
+ * 4. Miscellaneous Effects
+ * 
+ * There are multiple page layouts because there needs to be. Some pages, such as profile, charsheet, and annals,
+ * are laid out to be one column pages. The login/character creation screen are both the first Two Column layout.
+ * The second Two Column Layout is used for the "Actions/Game" screen which occurs on index.php after a character
+ * is started.
+ */
+
+/*Browser Resets
+ *via http://developer.yahoo.com/yui/reset/
+ */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img { 
+	border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym { border:0;
+}
+/*End Browser Resets*/
+
+/*Layout*/
+
+body {
+	background-color: #e0ffd5;
+	background-image: url('images/header3.jpg');
+	background-repeat: repeat-x;
+}
+
+#wrapper {
+	width: 900px;
+	margin: auto;
+}
+
+/*header layout*/
+#header {
+	position: relative;
+	width: 900px;
+	height: 122px;
+	background-image: url('images/headerbranding4.jpg');
+	background-repeat: no-repeat;
+}
+
+/*This is for the benefit of those without CSS for whatever reason/can't see our images.*/
+#header h1 {
+	display: none;
+}
+
+#header #navigation {
+	position: absolute;
+	bottom: 20px;
+	right: 0px;
+}
+
+#header #navigation p.greeting {
+	padding: 0 0 10px 10px;
+	font-size: .9em;
+	color: #e0ffd5;
+}
+
+/*User navigation (top)*/
+#header #navigation li {
+	display: inline;
+	font-size: .8em;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	font-weight: bold;
+}
+
+#header #navigation li a {
+	text-decoration: none;
+	padding: 10px;
+}
+
+#header #navigation li a:link {
+	color: #ff4600;
+}
+
+#header #navigation li a:visited {
+	color: #ff4600;
+}
+
+#header #navigation li a:hover {
+	color: #ff4600;
+	background-color: #1a1b1a;
+}
+
+#header #navigation li a:active {
+	color: #ff4600;
+}
+/*End User navigation (top)*/
+
+#header #navigation span.warning {
+	position: absolute;
+	right: -3px;
+	bottom: 55px;
+}
+/*End header layout*/
+
+/*Content Layout*/
+#content {
+	margin: 20px 0 0 0;
+	width: 900px;
+}
+
+/*First One Column*/
+
+#content #onecolumn {
+	width: 600px;
+	margin: auto;
+}
+
+#content #onecolumn #searchcontrols {
+	background-color: #cbf0c7;
+	margin: 20px 0;	
+	border: 1px solid #3c3f3b;
+	padding: 20px;
+}
+
+#content #onecolumn #searchcontrols #searchinner {
+	background-color: #e0ffd5;
+	padding: 20px;
+	border: 1px solid #3c3f3b;
+}
+/*Used for the Annals jQuery script*/
+.clicktoexpand {
+	margin: 0 0 20px;
+	font-size: .8em;
+	cursor: pointer;
+}
+
+/*Character Profile Table*/
+#content table.characterstats {
+	width: 400px;
+}
+
+#content table.characterstats td {
+	border-width: 1px 0px;
+	border-style: solid;
+	border-color: #3c3f3b;
+	height: 30px;
+	width: 200px;
+}
+
+/*Zebra Striped Tables*/
+/*There is a Zebra Striped Table in the Annals of Adventurers,
+ * Profiles, Merchants, and Charsheets*/
+ 
+#content table.stripeme {
+	width: 600px;
+	table-layout: fixed;
+}
+
+#content table.stripeme th {
+	font-size: 1em;
+	font-weight: bold;
+	background-color: #add9b1;
+	height: 30px;
+}
+
+#content table.stripeme td {
+	border-width: 1px 0px;
+	border-style: solid;
+	border-color: #3c3f3b;
+	height: 30px;
+}
+
+tr.alt td {
+	background-color: #cbf0c7;
+}
+
+/*End First One Column*/
+
+/*Second One Column*/
+
+#content #adminpanel {
+	margin: auto;
+	border: 1px solid #3c3f3b;
+	background-color: #cbf0c7;
+ }
+ 
+#content #adminpanel #adminpanel_inner {
+	padding: 20px;
+ }
+ 
+#content #adminpanel #adminpanel_inner li {
+	display: inline;
+ }
+ 
+#content #adminpanel #adminpanel_inner li a {
+	padding: 10px;
+}
+
+/*End Second One Column*/
+
+/*First Two Columns*/
+
+#content #leftside {
+	width: 450px;
+	float: left;
+}
+
+#content #leftside_inner {
+	position: relative;
+	margin: 35px 0 0 0;
+}
+
+#content #leftside_inner h2 {
+	margin: 0 0 3px 0px;
+}
+
+#content #leftside_inner p.loginerror {
+	position: absolute;
+	right: 92px;
+	bottom: 35px;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: red;
+}
+
+#content #leftside_inner p.logoutfirst {
+	position: absolute;
+	right: 92px;
+	bottom: 70px;
+	font-size: 1em;
+}
+
+#content #leftside_inner p.logout {
+	position: absolute;
+	right: 92px;
+	bottom: 40px;
+	font-size: 1em;
+}
+
+#content #leftside_inner input.input {
+	margin: 0 0 10px;
+	width: 335px;
+	height: 40px;
+	font-size: 1.8em;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #e0ffd5;
+	color: #3d403c;
+}
+
+#content #leftside_inner input.submit {
+	background-image: url('images/buttonbg.jpg');
+	width: 100px;
+	height: 50px;
+	color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1em;
+    border-style: none;
+}
+
+#content #leftside_inner #contentbox {
+	background-image: url('images/loginbox.jpg');
+	background-repeat: no-repeat;
+	width: 414px;
+	height: 248px;
+}
+
+#content #leftside_inner #contentbox_inner {
+	padding: 15px 0 0 20px;
+}
+
+#content #leftside_inner #contentbox_inner .charactercreatesubmit {
+	margin: 30px 0 0 0;
+}
+
+#content #leftside_inner #contentbox_inner .invalidnameerror {
+	position: absolute;
+	right: 30px;
+	bottom: 21px;
+	width: 250px;
+}
+
+#content #leftside_inner #contentbox_inner .invalidnameerror p {
+	color: red;
+	font-weight: bold;
+}
+
+#rightside {
+	width: 450px;
+	float: right;
+}
+
+#rightside_inner {
+
+}
+
+/*End First Two Columns*/
+
+/*Second Two Columns*/
+
+#content #leftside2 {
+	float: left;
+	width:250px;
+}
+
+#content #leftside2 #leftside2_inner {
+
+}
+
+#content #leftside2 #leftside2_inner ul li a {
+	font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
+	font-size: 1.6em;
+	font-weight: bold;
+	margin: 0 0 20px;
+	background-image: url('images/mainbuttonup.jpg');
+	display: block;
+	height: 53px;
+	width: 188px;
+	padding: 22px 0 0 62px;
+	color: #3c3f3b;
+	text-decoration: none;
+}
+#content #leftside2 #leftside2_inner ul li a:hover {
+	background-image: url('images/mainbuttondown.jpg');
+	color: #3c3f3b;
+}
+
+#content #rightside2 {
+	float: right;
+	width: 600px;
+}
+
+#content #rightside2 #rightside2_inner {
+
+}
+
+/* Mail Page */
+
+#content #rightside2 #rightside2_inner h3.mail_subject {
+	margin: 0 0 0 0;
+}
+
+#content #rightside2 #rightside2_inner #message {
+	padding: 20px;
+	background-color: #cbf0c7;
+	margin: 20px 0;	
+	border: 1px solid #3c3f3b;
+	width: 500px;
+}
+
+#content #rightside2 #rightside2_inner #message p {
+	font-size: .8em;
+}
+
+#content #rightside2 #rightside2_inner #message p.mail_sender {
+	font-size: .7em;
+}
+
+#content #rightside2 #rightside2_inner #message p.mail_sender span.mail_sendername {
+	font-weight: bold;
+}
+
+#content #rightside2 #rightside2_inner #message #message_inner {
+	border: 1px solid #3c3f3b;
+	background-color: #e0ffd5;
+	padding: 20px;
+}
+/* End Mail Page */
+
+/*End Second Two Columns*/
+
+/*Footer*/
+
+#footer {
+	margin: 40px 0 0 0;
+	height: 80px;
+	clear: both;
+	background-image: url('images/footer.jpg');
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+#footer #footer_inner {
+	padding: 32px 0 0 20px;
+}
+
+.clear {
+	clear: both;
+}
+
+.floatleft {
+	float: left;
+}
+
+.floatright {
+	float: right;
+}
+
+/*End Footer*/
+
+/*End Layout*/
+
+/*Typography*/
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
+	color: #3c3f3b;
+}
+h1 {
+
+}
+h2 {
+font-size: 2.5em;
+}
+h3 {
+font-size: 1.5em;
+}
+h4 {
+
+}
+p {
+	color: #3c3f3b;
+	font-size: .9em;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	line-height: 1.5em;
+}
+td,th {
+	color: #3c3f3b;
+	font-size: .9em;
+	line-height: 1.5em;
+}
+td {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+}
+th {
+	font-family: Baskerville, Garamond, Palatino, "Palatino Linotype", "Hoefler Text", "Times New Roman", serif;
+}
+
+#footer p {
+	font-size: .7em;
+	color: #3c3f3b;
+}
+span.boldtext {
+	font-weight: bold;
+}
+span.warning {
+	color: red;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+a {
+	font-weight: bold;
+	color: #7c2300;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #7c2300;
+}
+
+a:hover {
+	color: #411200;
+}
+
+a:active {
+
+}
+
+/*End Typography*/
+
+/*Cool little miscelaneous things*/
+
+/*Found the following ideas for health/experience bars here:
+ *http://blog.leetsoft.com/2006/8/22/super-simple-css-bars
+ */
+#content div.healthbar {
+	width: 450px;
+	height: 20px;
+}
+
+#content div.healthbar p.healthbartext {
+	width: 26px;
+	float: left;
+}
+
+#content div.healthbarcontainer {
+  border: 1px solid #3d403c; 
+  width: 400px;
+  padding: 1px; 
+  float: right; 
+  background: white;
+}
+
+#content div.healthbarcontainer div {
+  background-color: #97E57B; 
+  height: 16px
+}
+
+#content div.healthbarcontainer div p {
+	font-size: .8em;
+}
+
+#content div.experiencebar {
+	width: 450px;
+	height: 20px;
+	margin: 5px 0 0 0;
+}
+
+#content div.experiencebar p.experiencebartext {
+	width: 26px;
+	float: left;
+}
+
+#content div.experiencebarcontainer {
+  border: 1px solid #3d403c; 
+  width: 400px;
+  padding: 1px; 
+  float: right; 
+  background: white;
+}
+
+#content div.experiencebarcontainer div {
+  background-color: #ffd800; 
+  height: 16px
+}
+
+#content div.experiencebarcontainer div p {
+	font-size: .8em;
+}

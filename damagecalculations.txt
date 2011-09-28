@@ -1,0 +1,5 @@
+(Monster's Strength - (Player's defense+(player's shield power/2)))
+
++
+
+(((randombetween[monster's weapon low, monster's weapon high]+1)*bonus)-(Player's defense+(player's shield power/2))
