@@ -117,11 +117,12 @@ if (!isset($userqueryarray['username'])) {
 
 //This stuff is for when the user wishes to do something to the account, such as friend or block
 if (isset($_GET['relationship'])) {
-	$con = mysql_connect("localhost","sweetgame","sweetgamepassword");
+	/*$con = mysql_connect("localhost","sweetgame","sweetgamepassword");
 	if (!$con) {
 		die('Could not connect: ' . mysql_error());
 	}
-	mysql_select_db("sweetgame", $con);
+	mysql_select_db("sweetgame", $con);*/
+	include 'inc_connection.php';
 	//First off, you can not be in a relation with yourself, so let's stop that nonsense
 	if (!isset($_GET['username']) || $_GET['username']===$_SESSION['username']) {
 	echo "Sorry, you can't do that to yourself, silly.";
